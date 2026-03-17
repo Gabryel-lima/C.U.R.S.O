@@ -6,11 +6,9 @@
 ![Curso](https://img.shields.io/badge/Senai-Desenvolvimento%20Backend-red)
 ![Stack](https://img.shields.io/badge/Python-FastAPI%20%2B%20MySQL-3776AB)
 
----
-
-![Logo do C.U.R.S.O](assets/curso.png)
-
----
+<p align="center">
+  <img src="assets/curso.png" alt="Logo do C.U.R.S.O" width="450">
+</p>
 
 Projeto acadêmico desenvolvido para o curso de Desenvolvimento Backend do Senai, com foco na modelagem, persistência de dados e construção de uma API REST para o gerenciamento de ursos resgatados e santuários.
 
