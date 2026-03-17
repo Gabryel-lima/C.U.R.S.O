@@ -1,0 +1,21 @@
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+.env
+*.pyc
+*.pyo
+*.pyd
+dist/
+build/
+*.egg-info/
+
+# Rascunhos locais das fases dos colegas
+docs/fases/fase-1*.md
+docs/fases/fase-2*.md
+docs/fases/fase-3*.md
+docs/fases/fase-5*.md
+docs/fases/colegas/
+!docs/fases/template-unico-fases-1-2-3-5.md

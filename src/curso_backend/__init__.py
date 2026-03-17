@@ -1,0 +1,1 @@
+"""Pacote base do backend C.U.R.S.O."""

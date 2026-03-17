@@ -1,0 +1,1 @@
+"""Agrupa as features de negocio do projeto."""
