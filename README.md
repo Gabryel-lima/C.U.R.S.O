@@ -212,7 +212,7 @@ Makefile
 | `make venv` | Cria apenas o ambiente virtual |
 | `make run` | Inicia a API FastAPI em modo de desenvolvimento e verifica portas disponíveis |
 | `make test` | Executa os testes |
-| `make list_ports` | Lista as portas em uso no sistema |
+| `make ports` | Lista as portas em uso no sistema |
 | `make lint` | Executa verificações básicas de qualidade |
 | `make check` | Executa lint e testes em sequência |
 | `make clean` | Remove caches e arquivos temporários |
@@ -234,8 +234,3 @@ Makefile
 
 ---
 
-## Próximos passos
-
-1. Você pode continuar a implementação da fase 4 a partir de [docs/api/contrato-inicial.md](docs/api/contrato-inicial.md).
-2. Seus colegas podem duplicar o template compartilhado para trabalhar nas fases 1, 2, 3 e 5 fora do fluxo principal do repositório.
-3. Quando as outras fases estiverem fechadas pelo grupo, o material final pode ser reintegrado de forma controlada.
