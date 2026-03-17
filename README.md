@@ -1,5 +1,4 @@
 <div align="center">
-
 <h1>C.U.R.S.O</h1>
 
 **Centro de União, Resgate e Santuário dos Ursos**
