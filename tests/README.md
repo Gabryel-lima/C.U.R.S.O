@@ -31,4 +31,4 @@ Os testes ainda não foram implementados porque esta entrega prepara apenas a ba
 ## Créditos
 
 **Author:** Gabryel-lima  
-**Co-authors:** Matheus M Guedes, VthugodoNl, ana daniel
+**Co-authors:** Matheus M Guebel, VthugodoNl, ana daniel

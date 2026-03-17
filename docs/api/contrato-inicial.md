@@ -150,4 +150,4 @@ Resposta:
 ## Créditos
 
 **Author:** Gabryel-lima  
-**Co-authors:** Matheus M Guedes, VthugodoNl, ana daniel
+**Co-authors:** Matheus M Guebel, VthugodoNl, ana daniel

@@ -14,4 +14,4 @@ Use apenas o template vazio compartilhado em [docs/fases/template-unico-fases-1-
 ## Créditos
 
 **Author:** Gabryel-lima  
-**Co-authors:** Matheus M Guedes, VthugodoNl, ana daniel
+**Co-authors:** Matheus M Guebel, VthugodoNl, ana daniel

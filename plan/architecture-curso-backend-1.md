@@ -128,4 +128,4 @@ Este plano define a base inicial do backend acadêmico C.U.R.S.O, cobrindo docum
 ## Credits
 
 **Author:** Gabryel-lima  
-**Co-authors:** Matheus M Guedes, VthugodoNl, ana daniel
+**Co-authors:** Matheus M Guebel, VthugodoNl, ana daniel
