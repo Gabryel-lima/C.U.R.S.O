@@ -210,8 +210,9 @@ Makefile
 | `make help` | Lista todos os comandos disponíveis |
 | `make install` | Cria o `.venv` e instala dependências do projeto e de desenvolvimento |
 | `make venv` | Cria apenas o ambiente virtual |
-| `make run` | Inicia a API FastAPI em modo de desenvolvimento |
+| `make run` | Inicia a API FastAPI em modo de desenvolvimento e verifica portas disponíveis |
 | `make test` | Executa os testes |
+| `make list_ports` | Lista as portas em uso no sistema |
 | `make lint` | Executa verificações básicas de qualidade |
 | `make check` | Executa lint e testes em sequência |
 | `make clean` | Remove caches e arquivos temporários |
