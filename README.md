@@ -22,7 +22,6 @@ Projeto acadêmico desenvolvido para o curso de Desenvolvimento Backend do Senai
 - [Estrutura do projeto](#estrutura-do-projeto)
 - [Automação disponível](#automação-disponível)
 - [Direção técnica](#direção-técnica)
-- [Próximos passos](#próximos-passos)
 
 ---
 
@@ -155,7 +154,7 @@ make test
 - [docs/sql/README.md](docs/sql/README.md)  
   Arquivo reservado para a fase 2, apontando para o template compartilhado.
 
-### 3. Fase 4, sua área
+### 3. Fase 4 - Gabryel-lima
 
 - [docs/api/contrato-inicial.md](docs/api/contrato-inicial.md)  
   Contrato inicial da API REST da fase 4.

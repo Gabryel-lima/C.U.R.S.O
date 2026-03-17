@@ -22,6 +22,73 @@
 | Formato de resposta | `application/json` |
 | Identificadores | UUID gerado pela aplicação |
 | Erros | Estrutura com `type`, `title`, `status` e `detail` |
+| Persistencia atual | Estado em memoria encapsulado por services de feature |
+
+## Schemas implementados
+
+### Santuario
+
+```json
+{
+	"nome": "Refugio Norte",
+	"pais": "Brasil",
+	"estado": "Amazonas",
+	"capacidade": 12
+}
+```
+
+Resposta:
+
+```json
+{
+	"id": "uuid",
+	"nome": "Refugio Norte",
+	"pais": "Brasil",
+	"estado": "Amazonas",
+	"capacidade": 12,
+	"ocupacao": 0
+}
+```
+
+### Cuidador
+
+```json
+{
+	"nome": "Lia Rocha",
+	"email": "lia@curso.local",
+	"telefone": "+55 11 99999-0000",
+	"especialidade": "reabilitacao",
+	"santuario_id": "uuid-opcional",
+	"ativo": true
+}
+```
+
+### Urso
+
+```json
+{
+	"nome": "Bento",
+	"especie": "urso-pardo",
+	"sexo": "macho",
+	"idade_estimada": 7,
+	"status": "em_tratamento",
+	"santuario_id": "uuid-opcional"
+}
+```
+
+### Resgate
+
+```json
+{
+	"urso_id": "uuid",
+	"cuidador_id": "uuid-opcional",
+	"local": "Serra do Mar",
+	"data_resgate": "2026-03-17",
+	"condicao_saude": "desidratado",
+	"status": "aberto",
+	"descricao": "Encontrado perto da rodovia."
+}
+```
 
 ## Recursos
 
@@ -76,8 +143,9 @@
 
 ## Observações
 
-- A implementação futura deve separar validação, lógica e acesso a dados por feature.
-- O contrato pode ser refinado após a definição final dos schemas Pydantic e das regras do grupo.
+- A implementacao atual separa validacao, logica e rotas por feature em `src/curso_backend/features`.
+- A persistencia foi encapsulada em estado compartilhado e services para permitir troca futura por MySQL sem alterar o contrato HTTP.
+- Regras de conflito implementadas: email duplicado de cuidador, santuario inexistente, capacidade excedida, resgate ativo duplicado e exclusao com vinculos ativos.
 
 ## Créditos
 

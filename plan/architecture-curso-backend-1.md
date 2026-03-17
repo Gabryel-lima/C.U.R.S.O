@@ -2,7 +2,7 @@
 goal: Estruturar a base documental e técnica inicial do projeto C.U.R.S.O
 version: 1.0
 date_created: 2026-03-16
-last_updated: 2026-03-16
+last_updated: 2026-03-17
 owner: Grupo C.U.R.S.O
 status: In progress
 tags: [architecture, feature, backend, documentation, mysql, python]
@@ -77,9 +77,9 @@ Este plano define a base inicial do backend acadêmico C.U.R.S.O, cobrindo docum
 
 | Task | Description | Completed | Date |
 |------|-------------|-----------|------|
-| TASK-010 | Implementar schemas de entrada e saída para cada entidade |  |  |
-| TASK-011 | Implementar rotas CRUD para ursos, resgates, santuários e cuidadores |  |  |
-| TASK-012 | Validar status codes, erros e integração com banco de dados |  |  |
+| TASK-010 | Implementar schemas de entrada e saída para cada entidade | x | 2026-03-17 |
+| TASK-011 | Implementar rotas CRUD para ursos, resgates, santuários e cuidadores | x | 2026-03-17 |
+| TASK-012 | Validar status codes, erros e integração com camada de persistência desacoplada | x | 2026-03-17 |
 
 ## 3. Alternatives
 
@@ -110,7 +110,7 @@ Este plano define a base inicial do backend acadêmico C.U.R.S.O, cobrindo docum
 
 - **TEST-001**: Validar manualmente a coerência entre entidades, diagrama de classes e script SQL.
 - **TEST-002**: Verificar se a estrutura de pastas atende à organização por feature.
-- **TEST-003**: Na próxima etapa, executar testes unitários e de integração antes da implementação da API.
+- **TEST-003**: Executar testes de API cobrindo sucesso, validação, não encontrado e conflito.
 
 ## 7. Risks & Assumptions
 
@@ -118,6 +118,7 @@ Este plano define a base inicial do backend acadêmico C.U.R.S.O, cobrindo docum
 - **RISK-002**: A equipe pode decidir usar outro framework Python, exigindo ajuste do empacotamento.
 - **ASSUMPTION-001**: FastAPI foi adotado como base por facilitar documentação automática e testes.
 - **ASSUMPTION-002**: O fluxo principal do sistema é registrar resgates e administrar a permanência dos ursos no santuário.
+- **ASSUMPTION-003**: A persistência final em MySQL pode substituir a camada atual em memoria sem alterar as rotas da API.
 
 ## 8. Related Specifications / Further Reading
 

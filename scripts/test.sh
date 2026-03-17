@@ -15,4 +15,4 @@ else
     exit 1
 fi
 
-"$PYTHON_BIN" -m pytest -q
+cd "$PROJECT_ROOT" && "$PYTHON_BIN" -m pytest && "$PYTHON_BIN" -m ruff check .
