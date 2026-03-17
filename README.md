@@ -1,14 +1,19 @@
-# C.U.R.S.O
+<div align="center">
 
-> **Centro de União, Resgate e Santuário dos Ursos**
+<h1>C.U.R.S.O</h1>
 
-![Status](https://img.shields.io/badge/status-base%20inicial-blue)
-![Curso](https://img.shields.io/badge/Senai-Desenvolvimento%20Backend-red)
-![Stack](https://img.shields.io/badge/Python-FastAPI%20%2B%20MySQL-3776AB)
+**Centro de União, Resgate e Santuário dos Ursos**
 
-<p align="center">
-  <img src="assets/curso.png" alt="Logo do C.U.R.S.O" width="450">
-</p>
+[![Status](https://img.shields.io/badge/status-base%20inicial-blue)](#)
+[![Curso](https://img.shields.io/badge/Senai-Desenvolvimento%20Backend-red)](#)
+[![Stack](https://img.shields.io/badge/Python-FastAPI%20%2B%20MySQL-3776AB)](#)
+
+<img src="assets/curso.png" alt="Logo do C.U.R.S.O" width="400">
+
+Projeto acadêmico focado em modelagem de dados e construção de uma API REST para o gerenciamento de ursos resgatados e santuários.
+*Desenvolvido para o curso de Desenvolvimento Backend do Senai.*
+
+</div>
 
 Projeto acadêmico desenvolvido para o curso de Desenvolvimento Backend do Senai, com foco na modelagem, persistência de dados e construção de uma API REST para o gerenciamento de ursos resgatados e santuários.
 
