@@ -238,5 +238,3 @@ Makefile
 | Organização | Feature-first em `src/curso_backend/features` |
 | Formato de resposta | JSON |
 | Automação | Makefile + scripts `sh` portáveis |
-
----
