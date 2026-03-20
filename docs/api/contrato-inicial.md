@@ -143,9 +143,13 @@ Resposta:
 
 ## Observações
 
-- A implementacao atual separa validacao, logica e rotas por feature em `src/curso_backend/features`.
-- A persistencia foi encapsulada em estado compartilhado e services para permitir troca futura por MySQL sem alterar o contrato HTTP.
-- Regras de conflito implementadas: email duplicado de cuidador, santuario inexistente, capacidade excedida, resgate ativo duplicado e exclusao com vinculos ativos.
+- **Organização do código:** A implementação separa validação, lógica e rotas por feature em `src/curso_backend/features`.
+- **Persistência:** Atualmente a persistência está encapsulada em estado em memória para desenvolvimento; a camada de serviços foi projetada para permitir substituição por MySQL sem quebrar o contrato HTTP.
+- **Campo `ocupacao` em `SantuarioResponse`:** este campo é computado dinamicamente pela API (não armazenado): corresponde ao número de ursos atualmente alocados ao santuário. Definição: `ocupacao = count(ursos) WHERE urso.santuario_id = santuario.id`.
+- **Deleção de santuário (`DELETE /api/v1/santuarios/{id}`):** a API retornará `409 Conflict` se existirem vínculos ativos (ursos ou cuidadores) ao santuário. Isto garante que remoções acidentais não nulifiquem vínculos sem controle. Para remover um santuário, primeiro desvincule ou mova os ursos/cuidadores.
+- **Regras de conflito já implementadas:** email duplicado de cuidador, santuario inexistente ao criar/atualizar urso, capacidade insuficiente ao atualizar santuário, resgate ativo duplicado e exclusão com vínculos ativos.
+
+**Observação para a equipe de DB:** o script SQL fornecido pelo time de banco deve conservar relações e chaves estrangeiras. A API aplica checagens de negócio (ex.: bloqueio de deleção, cálculo de ocupação); as constraints de banco podem ser definidas com `RESTRICT` ou `SET NULL` conforme política, mas o comportamento da API (retornar 409) será aplicado independentemente.
 
 ## Créditos
 

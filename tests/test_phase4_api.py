@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from fastapi.testclient import TestClient
 
-from src.curso_backend.main import create_app
+from curso_backend.main import create_app
 
 
 def create_client() -> TestClient:

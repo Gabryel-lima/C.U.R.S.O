@@ -119,6 +119,49 @@ Dentro do WSL, use os mesmos comandos de instalação do Linux. Essa opção cos
 
 ---
 
+## Database & Testes (Desenvolvimento local)
+
+Este repositório fornece uma aplicação FastAPI e modelos SQLAlchemy. Para rodar os testes e a API localmente siga os passos abaixo.
+
+1. Crie e ative o ambiente virtual:
+
+```bash
+make install
+```
+
+2. Configure a variável de ambiente do banco (opcional). Por padrão a aplicação usa um banco SQLite in-memory para testes locais. Para apontar para o MySQL de desenvolvimento:
+
+```bash
+export DATABASE_URL="mysql+pymysql://user:pass@host/curso_db"
+```
+
+3. (Opcional) Se quiser que o app inicialize as tabelas automaticamente em desenvolvimento, mantenha `INIT_DB=1` (padrão). Para desabilitar:
+
+```bash
+export INIT_DB=0
+```
+
+4. Rodar a suíte de testes:
+
+```bash
+make test
+# ou diretamente
+pytest -q
+```
+
+5. Iniciar a aplicação em desenvolvimento:
+
+```bash
+export DATABASE_URL="sqlite+pysqlite:///./dev.db"
+make run
+```
+
+Observações:
+- As migrations não foram incluídas neste repositório — o time de Banco fornecerá o `script.sql` final. Se preferir, você pode gerar migrations com `alembic` a partir dos modelos em `src/curso_backend/features/*/models.py`.
+- Se os testes falharem localmente, copie a saída do `pytest` aqui que eu corrijo as falhas.
+
+---
+
 ## Primeiros comandos
 
 ```bash

@@ -10,6 +10,8 @@ from curso_backend.features.santuarios.router import router as santuarios_router
 from curso_backend.features.ursos.router import router as ursos_router
 from curso_backend.shared.problem import ApiProblem, validation_problem
 from curso_backend.shared.state import AppState
+from curso_backend.shared.db import init_db
+import os
 
 
 def create_app() -> FastAPI:
@@ -19,6 +21,9 @@ def create_app() -> FastAPI:
         version="0.2.0",
     )
     app.state.store = AppState()
+    # initialize DB when requested (default to enabled for local/dev)
+    if os.environ.get("INIT_DB", "1") == "1":
+        init_db()
 
     @app.exception_handler(ApiProblem)
     async def handle_api_problem(request: Request, exc: ApiProblem) -> JSONResponse:

@@ -22,4 +22,6 @@ class CuidadorPayload(BaseModel):
 
 
 class CuidadorResponse(CuidadorPayload):
+    model_config = ConfigDict(from_attributes=True)
+
     id: str

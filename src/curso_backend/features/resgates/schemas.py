@@ -19,4 +19,6 @@ class ResgatePayload(BaseModel):
 
 
 class ResgateResponse(ResgatePayload):
+    model_config = ConfigDict(from_attributes=True)
+
     id: str

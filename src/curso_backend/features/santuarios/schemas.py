@@ -13,5 +13,7 @@ class SantuarioPayload(BaseModel):
 
 
 class SantuarioResponse(SantuarioPayload):
+    model_config = ConfigDict(from_attributes=True)
+
     id: str
     ocupacao: int

@@ -3,6 +3,7 @@ from __future__ import annotations
 from typing import Literal
 
 from pydantic import BaseModel, ConfigDict, Field
+from datetime import date
 
 
 class UrsoPayload(BaseModel):
@@ -14,7 +15,11 @@ class UrsoPayload(BaseModel):
     idade_estimada: int = Field(ge=0, le=80)
     status: Literal["em_tratamento", "apto", "em_transferencia"]
     santuario_id: str | None = None
+    data_resgate: date | None = None
+    estado_saude: str | None = None
 
 
 class UrsoResponse(UrsoPayload):
+    model_config = ConfigDict(from_attributes=True)
+
     id: str

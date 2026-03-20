@@ -3,54 +3,35 @@ from __future__ import annotations
 from fastapi import APIRouter, Depends, Response, status
 
 from curso_backend.features.resgates.schemas import ResgatePayload, ResgateResponse
-from curso_backend.features.resgates.service import (
-    create_resgate,
-    delete_resgate,
-    get_resgate,
-    list_resgates,
-    update_resgate,
-)
-from curso_backend.shared.dependencies import get_state
-from curso_backend.shared.state import AppState
+from curso_backend.features.resgates import service_db as service
+from curso_backend.shared.deps_db import get_db
+from sqlalchemy.orm import Session
 
 
 router = APIRouter(prefix="/api/v1/resgates", tags=["resgates"])
 
 
 @router.get("", response_model=list[ResgateResponse])
-def list_route(state: AppState = Depends(get_state)) -> list[ResgateResponse]:
-    return list_resgates(state)
+def list_route(db: Session = Depends(get_db)) -> list[ResgateResponse]:
+    return service.list_resgates(db)
 
 
 @router.get("/{resgate_id}", response_model=ResgateResponse)
-def get_route(
-    resgate_id: str,
-    state: AppState = Depends(get_state),
-) -> ResgateResponse:
-    return get_resgate(state, resgate_id)
+def get_route(resgate_id: str, db: Session = Depends(get_db)) -> ResgateResponse:
+    return service.get_resgate(db, resgate_id)
 
 
 @router.post("", response_model=ResgateResponse, status_code=status.HTTP_201_CREATED)
-def create_route(
-    payload: ResgatePayload,
-    state: AppState = Depends(get_state),
-) -> ResgateResponse:
-    return create_resgate(state, payload)
+def create_route(payload: ResgatePayload, db: Session = Depends(get_db)) -> ResgateResponse:
+    return service.create_resgate(db, payload)
 
 
 @router.put("/{resgate_id}", response_model=ResgateResponse)
-def update_route(
-    resgate_id: str,
-    payload: ResgatePayload,
-    state: AppState = Depends(get_state),
-) -> ResgateResponse:
-    return update_resgate(state, resgate_id, payload)
+def update_route(resgate_id: str, payload: ResgatePayload, db: Session = Depends(get_db)) -> ResgateResponse:
+    return service.update_resgate(db, resgate_id, payload)
 
 
 @router.delete("/{resgate_id}", status_code=status.HTTP_204_NO_CONTENT)
-def delete_route(
-    resgate_id: str,
-    state: AppState = Depends(get_state),
-) -> Response:
-    delete_resgate(state, resgate_id)
+def delete_route(resgate_id: str, db: Session = Depends(get_db)) -> Response:
+    service.delete_resgate(db, resgate_id)
     return Response(status_code=status.HTTP_204_NO_CONTENT)
