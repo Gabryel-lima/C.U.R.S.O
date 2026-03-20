@@ -1,15 +1,58 @@
-# Fase 2 Reservada - Diagrama de Classes
+# Fase 2 - Diagrama de Classes (Concluída)
 
-> Este arquivo foi preservado apenas como referência de localização da fase 2.
+Este arquivo contém o diagrama de classes do projeto C.U.R.S.O. e uma descrição resumida das entidades persistentes.
 
-O conteúdo desta fase deve ser produzido pelos colegas a partir do template vazio compartilhado em [docs/fases/template-unico-fases-1-2-3-5.md](docs/fases/template-unico-fases-1-2-3-5.md).
+> Nota: a imagem do diagrama original foi fornecida por ana daniel — créditos da imagem abaixo.
+
+## Diagrama
+
+![Diagrama de classes do C.U.R.S.O](../../assets/diagrama-de-classes.png)
+
+*Créditos da imagem: ana daniel.*
+
+## Entidades principais (resumo do diagrama de classes)
+
+- `Urso`
+	- id: int
+	- especie: str
+	- idade_aproximada: str
+	- sexo: str
+	- data_resgate: date
+	- estado_saude: str
+	- status_atual: str
+
+- `Resgate`
+	- id: int
+	- localizacao: str
+	- data: date
+	- descricao: str
+	- urso_id: int (FK -> Urso)
+
+- `Santuario`
+	- id: int
+	- nome: str
+	- localizacao: str
+	- capacidade: int
+
+- `Cuidador`
+	- id: int
+	- nome: str
+	- telefone: str
+	- turno: str
+	- santuario_id: int (FK -> Santuario)
+
+## Observações
+
+- As classes acima representam a malha mínima necessária para as operações CRUD da API.
+- A modelagem no código deve refletir essas entidades e manter coerência com o script SQL em `sql/schema.sql`.
 
 ## Responsabilidade
 
-- Fase 2: colegas
+- Fase 2: concluída (diagrama e resumo adicionados)
 - Fase 4: Gabryel-lima
 
 ## Créditos
 
 **Author:** Gabryel-lima  
-**Co-authors:** Matheus M Guebel, VthugodoNl, ana daniel
+**Co-authors:** Matheus M Guebel, VthugodoNL  
+**Créditos (diagrama - imagem):** ana daniel

@@ -53,7 +53,7 @@ O sistema C.U.R.S.O foi definido como uma plataforma para registrar ursos resgat
 ## Equipe
 
 **Author:** Gabryel-lima  
-**Co-authors:** Matheus M Guebel, VthugodoNl, ana daniel
+**Co-authors:** Matheus M Guebel, VthugodoNL, ana daniel
 
 ---
 

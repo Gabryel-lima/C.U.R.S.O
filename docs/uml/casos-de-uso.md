@@ -12,4 +12,4 @@ O conteúdo desta fase deve ser produzido pelos colegas a partir do template vaz
 ## Créditos
 
 **Author:** Gabryel-lima  
-**Co-authors:** Matheus M Guebel, VthugodoNl, ana daniel
+**Co-authors:** Matheus M Guebel, VthugodoNL, ana daniel
