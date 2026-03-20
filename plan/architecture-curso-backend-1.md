@@ -47,8 +47,8 @@ Este plano define a base inicial do backend acadêmico C.U.R.S.O, cobrindo docum
 
 | Task | Description | Completed | Date |
 |------|-------------|-----------|------|
-| TASK-001 | Criar README principal com contexto, escopo e estrutura do repositório |  | 2026-03-16 |
-| TASK-002 | Documentar o escopo funcional e as entidades principais em Markdown |  | 2026-03-16 |
+| TASK-001 | Criar README principal com contexto, escopo e estrutura do repositório | x | 2026-03-17 |
+| TASK-002 | Documentar o escopo funcional e as entidades principais em Markdown | x | 2026-03-17 |
 | TASK-003 | Registrar os diagramas iniciais de casos de uso e classes em Markdown |  | 2026-03-16 |
 
 ### Implementation Phase 2
@@ -58,8 +58,8 @@ Este plano define a base inicial do backend acadêmico C.U.R.S.O, cobrindo docum
 | Task | Description | Completed | Date |
 |------|-------------|-----------|------|
 | TASK-004 | Criar script SQL inicial |  | 2026-03-16 |
-| TASK-005 | Definir contrato inicial da API REST com rotas e status esperados |  | 2026-03-16 |
-| TASK-006 | Criar esqueleto Python com empacotamento e pastas por feature |  | 2026-03-16 |
+| TASK-005 | Definir contrato inicial da API REST com rotas e status esperados | x | 2026-03-17 |
+| TASK-006 | Criar esqueleto Python com empacotamento e pastas por feature | x | 2026-03-17 |
 
 ### Implementation Phase 3
 
