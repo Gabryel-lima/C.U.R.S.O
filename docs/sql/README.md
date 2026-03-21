@@ -15,3 +15,5 @@ O arquivo técnico reservado para a fase 2 continua sendo [sql/schema.sql](../..
 
 **Author:** Gabryel-lima  
 **Co-authors:** Matheus M Guebel, VthugodoNL, ana daniel
+
+**Scripts SQL (valores.sql):** Vthugo

@@ -281,3 +281,11 @@ Makefile
 | Organização | Feature-first em `src/curso_backend/features` |
 | Formato de resposta | JSON |
 | Automação | Makefile + scripts `sh` portáveis |
+
+## Estado Atual (integração)
+
+- **Testes automatizados**: 14 passed (`pytest -q`).
+- **Seed**: o script `src/curso_backend/scripts/seed_db.py` foi executado e populou as tabelas principais (santuários, cuidadores, ursos, resgates e tabelas relacionadas quando aplicável).
+- **Endpoints validados**: `/api/v1/ursos`, `/api/v1/cuidadores`, `/api/v1/resgates` retornam dados conforme esperado.
+- **CRUD adicionados**: rotas básicas de CRUD foram implementadas para as entidades de `relatorios` (cidadao, atendente, veterinario, ocorrencia, diagnostico).
+- **Observação sobre autoria dos scripts SQL**: os scripts SQL de valores foram produzidos por **Vthugo** — atribuição inserida conforme solicitado.

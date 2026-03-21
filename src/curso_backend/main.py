@@ -8,10 +8,12 @@ from curso_backend.features.cuidadores.router import router as cuidadores_router
 from curso_backend.features.resgates.router import router as resgates_router
 from curso_backend.features.santuarios.router import router as santuarios_router
 from curso_backend.features.ursos.router import router as ursos_router
+from curso_backend.features.relatorios.router import router as relatorios_router
 from curso_backend.shared.problem import ApiProblem, validation_problem
 from curso_backend.shared.state import AppState
 from curso_backend.shared.db import init_db
 import os
+import bisect
 
 
 def create_app() -> FastAPI:
@@ -48,6 +50,7 @@ def create_app() -> FastAPI:
     app.include_router(cuidadores_router)
     app.include_router(ursos_router)
     app.include_router(resgates_router)
+    app.include_router(relatorios_router)
 
     return app
 
