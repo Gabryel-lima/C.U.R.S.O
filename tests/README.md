@@ -1,3 +1,13 @@
+Test suite conventions
+
+- Use `pytest` and `pytest-asyncio` for async tests.
+- Use `async_client` fixture from `tests/conftest.py` for integration tests.
+- Tests should live under `tests/` and be named `test_*.py`.
+- To run locally:
+
+```bash
+./scripts/test.sh
+```
 # Estratégia de Testes
 
 > Guia inicial para a fase de validação técnica do projeto.
