@@ -1,4 +1,3 @@
-# C.U.R.S.O
 <div align="center">
 <h1>C.U.R.S.O</h1>
 
