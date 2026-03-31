@@ -1,0 +1,5 @@
+node_modules/
+db/dev.sqlite
+.env
+.vscode/
+.DS_Store
