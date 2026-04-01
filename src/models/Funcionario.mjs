@@ -1,19 +1,19 @@
 /** Model base `Funcionario` — base para outros tipos de funcionários. */
+/**
+ * @author Gabryel-lima
+ * @date 2026-04-31
+ * @file Funcionario.js
+ * @description Modelo base para funcionários do centro de preservação dos ursos, como atendentes, cuidadores, veterinários e guias.
+ *              Contém campos comuns e métodos de validação e conversão.
+ * @param {Object} props
+ * @param {number|null} props.id
+ * @param {string} props.nome
+ * @param {string} props.papel - e.g. 'atendente', 'cuidador', 'veterinario', 'guia'
+ * @param {string|null} props.registro
+ * @param {string|null} props.email
+ * @param {string|null} props.telefone
+ */
 class Funcionario {
-  /**
-   * @author Gabryel-lima
-   * @date 2026-04-31
-   * @file Funcionario.js
-   * @description Modelo base para funcionários do centro de preservação dos ursos, como atendentes, cuidadores, veterinários e guias.
-   *              Contém campos comuns e métodos de validação e conversão.
-   * @param {Object} props
-   * @param {number|null} props.id
-   * @param {string} props.nome
-   * @param {string} props.papel - e.g. 'atendente', 'cuidador', 'veterinario', 'guia'
-   * @param {string|null} props.registro
-   * @param {string|null} props.email
-   * @param {string|null} props.telefone
-   */
   constructor({ id = null, nome, papel = 'funcionario', registro = null, email = null, telefone = null } = {}) {
     this.id = id;
     this.nome = nome;
