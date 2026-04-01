@@ -1,16 +1,16 @@
 /** Model base `Cidadao` — representa um cidadão que pode solicitar resgates. */
+/** 
+ * @author ana daniel
+ * @date 2026-04-31
+ * @file Cidadao.js
+ * @description Modelo para cidadãos que podem solicitar resgates de animais. Contém campos básicos e um método para solicitar resgate.
+ * @param {string} nome - Nome do cidadão
+ * @param {string} cpf - CPF do cidadão
+ * @param {string} telefone - Telefone de contato
+ * @param {string} email - Email de contato
+ * @param {string} endereco - Endereço residencial
+*/
 class Cidadao {
-    /** 
-     * @author ana daniel
-     * @date 2026-04-31
-     * @file Cidadao.js
-     * @description Modelo para cidadãos que podem solicitar resgates de animais. Contém campos básicos e um método para solicitar resgate.
-     * @param {string} nome - Nome do cidadão
-     * @param {string} cpf - CPF do cidadão
-     * @param {string} telefone - Telefone de contato
-     * @param {string} email - Email de contato
-     * @param {string} endereco - Endereço residencial
-    */
     constructor({nome, cpf, telefone, email, endereco} = {}) {
         this.nome = nome;
         this.cpf = cpf;
@@ -33,7 +33,7 @@ class Cidadao {
 
         console.log("Resgate solicitado com sucesso!");
         console.log(ocorrencia);
-    
+
         return ocorrencia;
     }
 }
