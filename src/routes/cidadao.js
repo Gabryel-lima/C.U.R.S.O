@@ -1,18 +1,14 @@
-const express = require("express");
-const Cidadao = require("../models/Cidadao");
+import express from 'express';
 
-const router = express.Router();
+const roteador = express.Router();
 
-// GET /cidadaos - lista todos (usa DB se disponível)
-router.get("/", (req, res, next) => {
-  const db = req.app && req.app.locals && req.app.locals.db;
-  if (!db) return res.status(503).json({ error: "DB não inicializado" });
+roteador.get("/cidadao", async(req, res) => {
+    try{
+      res.status(200).json({cidadao:"Dados Cidadao"}).end()
+    }catch(error){
+      res.status(400).json({error: "Error ao consulta o Cidadao"}).end()
+    }
 
-  db.all("SELECT * FROM cidadao", (err, rows) => {
-    if (err) return next(err);
-    const cidadaos = rows.map((r) => Cidadao.fromRow(r));
-    res.json(cidadaos);
-  });
-});
+})
 
-module.exports = router;
+export default roteador;
