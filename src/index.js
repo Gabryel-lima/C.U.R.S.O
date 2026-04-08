@@ -1,6 +1,6 @@
 const express = require('express');
 const { initDb } = require('./db/initDb');
-const funcionariosRouter = require('./routes/funcionarios');
+const funcionariosRouter = require('./routes/funcionario');
 
 const app = express();
 app.use(express.json());
