@@ -2,7 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import { config } from 'dotenv';
 import cidadaoRota from './src/routes/cidadao.js';
-import equipeptcRota from './src/routes/equipeptc.js';
+import equipeprotecaoRota from './src/routes/equipeprotecao.js';
 
 config();
 
@@ -15,7 +15,7 @@ api.use(bodyParser.json());
 
 api.use(cidadaoRota);
 
-api.use(equipeptcRota);
+api.use(equipeprotecaoRota);
 
 api.get("/teste", async(req, res) => {
     res.status(200).json({Resposta:"Rota de teste implementada"}).end()
