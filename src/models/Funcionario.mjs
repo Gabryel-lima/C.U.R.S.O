@@ -81,4 +81,6 @@ const funcionario = new Funcionario({ nome: 'João Silva', papel: 'atendente', e
 funcionario.validate();
 console.log(funcionario.toJSON());
 */
+
+// Exporta a classe Funcionario para ser utilizada em outras partes da aplicação
 export { Funcionario };
