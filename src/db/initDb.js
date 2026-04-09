@@ -1,6 +1,6 @@
-const fs = require('fs');
-const path = require('path');
-const sqlite3 = require('sqlite3').verbose();
+import fs from 'fs';
+import path from 'path';
+import sqlite3 from 'sqlite3';
 
 /** Inicializa o banco de dados SQLite.
  * @author Gabriel Lima
@@ -28,4 +28,16 @@ function initDb(options = {}) {
   });
 }
 
-module.exports = { initDb };
+/** Exemplo de uso 
+ *  initDb()
+ *    .then(db => {
+ *      console.log('Banco de dados inicializado com sucesso');
+ *      db.close();
+ *    })
+ *    .catch(err => {
+ *      console.error('Erro ao inicializar o banco de dados:', err);
+ *    });
+ */
+
+// Exporta a função initDb para ser utilizada em outras partes da aplicação
+export { initDb };

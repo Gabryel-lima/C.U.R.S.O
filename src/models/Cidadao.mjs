@@ -61,4 +61,5 @@ class Cidadao {
  * cidadao1.acompanharOcorrencia(ocorrencia);
  */
 
+// Exporta a classe Cidadao para ser utilizada em outras partes da aplicação
 export { Cidadao };
