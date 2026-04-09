@@ -1,7 +1,7 @@
 /** Model base `Funcionario` — base para outros tipos de funcionários. */
 /**
  * @author Gabryel-lima
- * @date 2026-04-31
+ * @date 2026-03-31
  * @file Funcionario.js
  * @description Modelo base para funcionários do centro de preservação dos ursos, como atendentes, cuidadores, veterinários e guias.
  *              Contém campos comuns e métodos de validação e conversão.

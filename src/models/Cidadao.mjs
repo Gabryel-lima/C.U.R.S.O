@@ -1,7 +1,7 @@
 /** Model base `Cidadao` — representa um cidadão que pode solicitar resgates. */
 /** 
  * @author ana daniel
- * @date 2026-04-31
+ * @date 2026-03-31
  * @file Cidadao.js
  * @description Modelo para cidadãos que podem solicitar resgates de animais. Contém campos básicos e um método para solicitar resgate.
  * @param {string} nome - Nome do cidadão

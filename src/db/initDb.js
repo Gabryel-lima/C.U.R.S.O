@@ -4,7 +4,7 @@ const sqlite3 = require('sqlite3').verbose();
 
 /** Inicializa o banco de dados SQLite.
  * @author Gabriel Lima
- * @date 2024-06-01
+ * @date 2026-04-01
  * @file initDb.js
  * @description Lê o arquivo SQL de inicialização e executa as instruções para criar as tabelas e inserir dados iniciais.
  * @param {Object} options - Opções de configuração
