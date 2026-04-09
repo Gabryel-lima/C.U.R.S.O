@@ -7,6 +7,7 @@ import cidadaoRota from './src/routes/cidadao.js';
 import cuidadoresRota from './src/routes/cuidadores.js';
 import veterinarioRota from './src/routes/veterinario.js';
 import equipeprotecaoRota from './src/routes/equipeprotecao.js';
+import visitaRota from './src/routes/visita.js'
 
 // Carrega as variáveis de ambiente do arquivo .env
 config();
@@ -32,6 +33,7 @@ api.use(cidadaoRota);
 api.use(cuidadoresRota);
 api.use(veterinarioRota);
 api.use(equipeprotecaoRota);
+api.use(visitaRota);
 
 // Rota de teste para verificar se a API está funcionando
 api.get("/teste", async(req, res) => {
