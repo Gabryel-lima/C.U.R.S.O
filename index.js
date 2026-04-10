@@ -6,6 +6,7 @@ import { config } from 'dotenv';
 import cidadaoRota from './src/routes/cidadao.js';
 import cuidadoresRota from './src/routes/cuidadores.js';
 import veterinarioRota from './src/routes/veterinario.js';
+import ursoRota from './src/routes/urso.js';
 
 // Carrega as variáveis de ambiente do arquivo .env
 config();
@@ -30,6 +31,7 @@ api.use(bodyParser.json());
 api.use(cidadaoRota);
 api.use(cuidadoresRota);
 api.use(veterinarioRota);
+api.use(ursoRota);
 
 // Rota de teste para verificar se a API está funcionando
 api.get("/teste", async(req, res) => {
