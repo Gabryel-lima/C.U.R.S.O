@@ -14,7 +14,6 @@ roteador.get("/cidadaos", async(req, res) => {
     }catch(error){
       res.status(400).json({error: "Error ao consulta o Cidadao"}).end()
     }
-
 })
 
 /** Exemplo de uso:

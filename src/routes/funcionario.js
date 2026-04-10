@@ -8,13 +8,12 @@ import express from 'express';
  */
 const roteador = express.Router();
 
-roteador.get("/funcionarios", async(req, res) => {
-    try{
-      res.status(200).json({funcionario:"Dados Funcionario"}).end()
+roteador.get("/funcionario", async(req, res) => {
+    try{ 
+      res.status(200).json({funcionario: "Dados Funcionario"}).end()
     }catch(error){
-      res.status(400).json({error: "Error ao consulta o Funcionario"}).end()
+      res.status(400).json({error: "Error ao consultar o Funcionario"}).end()
     }
-
 })
 
 /** Exemplo de uso:
