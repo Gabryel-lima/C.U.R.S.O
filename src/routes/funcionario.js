@@ -8,7 +8,7 @@ import express from 'express';
  */
 const roteador = express.Router();
 
-roteador.get("/funcionario", async(req, res) => {
+roteador.get("/funcionarios", async(req, res) => {
     try{
       res.status(200).json({funcionario:"Dados Funcionario"}).end()
     }catch(error){

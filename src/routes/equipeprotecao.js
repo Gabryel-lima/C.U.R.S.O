@@ -8,7 +8,7 @@ import express from 'express';
 */
 const roteador = express.Router();
 
-roteador.get('/equipeprotecao', async(req, res) => {
+roteador.get('/equipesprotecao', async(req, res) => {
     try{
         res.status(200).json({equipeprotecao:"Dados da Equipe de Protecao"}).end()
     }catch(error){

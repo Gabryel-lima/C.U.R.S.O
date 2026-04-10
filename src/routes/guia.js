@@ -2,7 +2,7 @@ import express from 'express';
 
 const roteador = express.Router();
 
-roteador.get("/guia", async(req, res) => {
+roteador.get("/guias", async(req, res) => {
     try{
         res.status(200).json({guia:"Dados do Guia"}).end()
 

@@ -8,7 +8,7 @@ import express from 'express';
  */
 const roteador = express.Router();
 
-roteador.get("/visita", async(req, res) => {
+roteador.get("/visitas", async(req, res) => {
     try{
       res.status(200).json({visita:"Dados Visita"}).end()
     }catch(error){
