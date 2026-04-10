@@ -4,6 +4,7 @@ import { config } from 'dotenv';
 
 // Importa as rotas dos módulos
 import cidadaoRota from './src/routes/cidadao.js';
+import cuidadoresRota from './src/routes/cuidadores.js';
 
 // Carrega as variáveis de ambiente do arquivo .env
 config();
@@ -26,6 +27,7 @@ api.use(bodyParser.json());
 
 // Configura as rotas da API
 api.use(cidadaoRota);
+api.use(cuidadoresRota);
 
 // Rota de teste para verificar se a API está funcionando
 api.get("/teste", async(req, res) => {
