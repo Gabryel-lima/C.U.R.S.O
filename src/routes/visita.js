@@ -10,11 +10,10 @@ const roteador = express.Router();
 
 roteador.get("/visita", async(req, res) => {
     try{
-      res.status(200).json({visita:"Dados Visita"}).end()
+      res.status(200).json({visita: "Dados Visita"}).end()
     }catch(error){
       res.status(400).json({error: "Error ao consulta a Visita"}).end()
     }
-
 })
 
 /** Exemplo de uso:
