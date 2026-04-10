@@ -1,8 +1,9 @@
-/** Model base `Funcionario` — base para outros tipos de funcionários. */
+import { BaseModel } from "./BaseModel.mjs";
+
 /**
  * @author Gabryel-lima
  * @date 2026-03-31
- * @file Funcionario.js
+ * @file Funcionario.mjs
  * @description Modelo base para funcionários do centro de preservação dos ursos, como atendentes, cuidadores, veterinários e guias.
  *              Contém campos comuns e métodos de validação e conversão.
  * @param {Object} props
@@ -13,8 +14,9 @@
  * @param {string|null} props.email
  * @param {string|null} props.telefone
  */
-class Funcionario {
+class Funcionario extends BaseModel {
   constructor({ id = null, nome, papel = 'funcionario', registro = null, email = null, telefone = null } = {}) {
+    super();
     this.id = id;
     this.nome = nome;
     this.papel = papel;
@@ -83,4 +85,4 @@ console.log(funcionario.toJSON());
 */
 
 // Exporta a classe Funcionario para ser utilizada em outras partes da aplicação
-export { Funcionario };
+export default { Funcionario };
