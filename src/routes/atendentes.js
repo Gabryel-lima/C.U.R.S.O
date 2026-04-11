@@ -17,7 +17,7 @@ roteador.get("/atendentes", async(req, res) => {
 })
 
 /** Exemplo de uso:
- *  const atendente = new Atendente({ nome: 'SXLOH', email: 'sxloh@exemplo.com' });
+ *  const atendente = new Atendente({ nome: 'Sônia', email: 'sonia@exemplo.com' });
  *  atendente.validate();
  *  console.log(atendente.toJSON());
  */
