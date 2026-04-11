@@ -3,12 +3,13 @@ import bodyParser from 'body-parser';
 import { config } from 'dotenv';
 
 // Importa as rotas dos módulos
-import cidadaoRota from './src/routes/cidadao.js';
+import cidadaoRota from './src/routes/cidadoes.js';
 import cuidadoresRota from './src/routes/cuidadores.js';
-import veterinarioRota from './src/routes/veterinario.js';
-import equipeprotecaoRota from './src/routes/equipeprotecao.js';
-import guiaRota from './src/routes/guia.js';
-import ursoRota from './src/routes/urso.js';
+import veterinarioRota from './src/routes/veterinarios.js';
+import equipeprotecaoRota from './src/routes/equipesDeProtecao.js';
+import guiaRota from './src/routes/guias.js';
+import ursoRota from './src/routes/ursos.js';
+import atendentesRota from './src/routes/atendentes.js';
 
 // Carrega as variáveis de ambiente do arquivo .env
 config();
@@ -30,6 +31,7 @@ const port = process.env.API_PORT;
 api.use(bodyParser.json()); 
 
 // Configura as rotas da API
+api.use(atendentesRota);
 api.use(cidadaoRota);
 api.use(cuidadoresRota);
 api.use(veterinarioRota);
