@@ -16,6 +16,30 @@ roteador.get("/funcionario", async(req, res) => {
     }
 })
 
+roteador.put("/funcionario/:id", async(req, res) => {
+    try{ 
+      res.status(200).json({funcionario: "Dados Funcionario Atualizado"}).end()
+    }catch(error){
+      res.status(400).json({error: "Error ao atualizar o Funcionario"}).end()
+    }
+})
+
+roteador.delete("/funcionario/:id", async(req, res) => {
+    try{ 
+      res.status(200).json({funcionario: "Funcionario Excluido"}).end()
+    }catch(error){
+      res.status(400).json({error: "Error ao excluir o Funcionario"}).end()
+    }
+})
+
+roteador.post("/funcionario", async(req, res) => {
+    try{ 
+      res.status(200).json({funcionario: "Funcionario Criado"}).end()
+    }catch(error){
+      res.status(400).json({error: "Error ao criar o Funcionario"}).end()
+    }
+})
+
 /** Exemplo de uso:
  *  const funcionario = new Funcionario({ nome: 'João Silva', email: 'joao@exemplo.com' });
  *  funcionario.validate();
