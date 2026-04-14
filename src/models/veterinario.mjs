@@ -23,4 +23,4 @@ class Veterinario extends Basemodel {
   }
 }
 
-export default { Veterinário };
+export default { Veterinario };
