@@ -9,9 +9,9 @@ class Veterinario extends Basemodel {
   }
 
   validate() {
-    Basemodel.assertNonEmptyString(this.endereco, 'id')
+    Basemodel.assertNonEmptyString(this.id, 'id')
     Basemodel.assertNonEmptyString(this.nome, 'nome');
-    Basemodel.assertRequiredIdentifier(this.numero, 'registro');
+    Basemodel.assertRequiredIdentifier(this.registro, 'registro');
   }
 
   toRow() {
