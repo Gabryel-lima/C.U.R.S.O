@@ -1,4 +1,5 @@
 import express from 'express';
+import { getEquipeProtecaoController } from '../controller/EquipeProtecao/GETequipeprotecaocontroller.mjs';
 
 /** Roteador para a equipe de proteção 
  *  @author VthugodoNL
@@ -12,14 +13,18 @@ const roteador = express.Router();
 // GET DA EQUIPE PROTECAO
 roteador.get('/equipesprotecao', async(req, res) => {
     try{
-        res.status(200).json({equipeprotecao: "Dados da Equipe de Protecao"}).end()
+        const listaequipeprotecao = await getEquipeProtecaoController();
+        
+        console.log(listaequipeprotecao);
+        res.status(200).json({listaequipeprotecao}).end()
     }catch(error){
+        console.error(error.message);
         res.status(400).json({error: "Error ao consultar Equipe de Protecao"}).end()
     }
 })
 
 // POST DA EQUIPE PROTECAO
-roteador.post("/veterinarios/", async (req,res) => {
+roteador.post("/equipeprotecao/", async (req,res) => {
     const{nome, registro} = req.body;
     console.log(nome);
     res.status(201).json([

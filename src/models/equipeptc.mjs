@@ -11,3 +11,22 @@ export const postEquipeProtecaoModel = async (conexaoDB, equipe_protecao) => {
         throw error;
     }
 }
+
+export const deleteEquipeProtecaoModel = async(conexaoDB, equipe_protecao) => {
+    const sql = 'DELETE INTO equipe_protecao '
+}
+
+export const getEquipeProtecaoModel = async(conexaoDB) => { 
+
+    const sql = 'SELECT id, nome, registro FROM equipe_protecao';
+
+    try {
+        const resultado = await conexaoDB.execute(sql);
+        console.log(resultado[0]);
+        return resultado[0];
+    } catch (error) {
+        console.log(error.message);
+        throw error;
+    }
+
+}

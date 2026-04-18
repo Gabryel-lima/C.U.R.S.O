@@ -31,5 +31,5 @@ export class EquipedeProtecao{
     }
 
 }
-// equipeptc = Equipe de Protecao
+
 const equipe_protecao = new EquipedeProtecao()

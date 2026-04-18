@@ -36,7 +36,6 @@ roteador.put("/veterinarios/:id", async(req, res) => {
 	console.log(isNaN(id), typeof(id));
 	console.log(typeof(Number(id)), console.log(Number(id)));
 	const {
-		id,
 		nome,
         registro
 	} = req.body;
@@ -59,10 +58,7 @@ roteador.put("/veterinarios/:id", async(req, res) => {
 roteador.delete("/veterinarios/:id", async(req, res) => {
 	//const {id} = req.params;
 	const id = req.params.id;
-
-	const listaIds = id.split(",").map(id => id.trim());
-
-	console.log(listaIds);
+	
 	res.status(204).end();
 });
 
