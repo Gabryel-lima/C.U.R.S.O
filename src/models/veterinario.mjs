@@ -1,26 +1,11 @@
-import { Basemodel } from "./BaseModel.mjs";
+export const postVeterinarioModel = async (conexaoDB, veterinario) => {
+  const sql = 'INSERT INTO veterinario(id, nome,registro) VALUES (?, ?, ?)';
 
-class Veterinario extends Basemodel {
-  constructor({ id = null, nome, registro } = {}) {
-    super();
-    this.id = id;
-    this.nome = nome;
-    this.registro = registro;
-  }
+  try {
+      const resultado = await conexaoDB.execute(sql, [veterinario.getID(), veterinario.getNome(), veterinario.getRegistro()]);
 
-  validate() {
-    Basemodel.assertNonEmptyString(this.id, 'id')
-    Basemodel.assertNonEmptyString(this.nome, 'nome');
-    Basemodel.assertRequiredIdentifier(this.registro, 'registro');
-  }
-
-  toRow() {
-    return {
-      id: this.id,
-      nome: this.nome.trim(),
-      registro: String(this.registro).trim()
-    };
+      return resultado[0].affectedRows;
+  } catch (error) {
+      throw error;
   }
 }
-
-export default { Veterinario };
