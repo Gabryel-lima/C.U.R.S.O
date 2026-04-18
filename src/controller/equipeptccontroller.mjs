@@ -1,4 +1,3 @@
-import { Connection } from "mysql2";
 import { dbConnectionPool} from "../config/dbConfig.mjs";
 import { EquipedeProtecao } from "../lib/EquipedeProtecao.mjs";
 import { postEquipeProtecaoModel } from "../models/equipeptc.mjs";
