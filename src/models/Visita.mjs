@@ -1,5 +1,3 @@
-import { BaseModel } from './BaseModel.mjs';
-
 /** Representa uma visita 
  *  @author ana daniel
  *  @file Visita.mjs
@@ -12,9 +10,8 @@ import { BaseModel } from './BaseModel.mjs';
  *  @param {string|number} numero - Número de identificação do visitante (CPF, RG, etc.)
  *  @returns {Visita} Instância do modelo Visita
 */
-class Visita extends BaseModel {
+class Visita {
   constructor({ id = null, nome, numero } = {}) {
-    super();
     this.id = id;
     this.nome = nome;
     this.numero = numero;

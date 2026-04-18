@@ -1,5 +1,3 @@
-import { BaseModel } from "./BaseModel.mjs";
-
 /**
  * @author Gabryel-lima
  * @date 2026-03-31
@@ -14,7 +12,7 @@ import { BaseModel } from "./BaseModel.mjs";
  * @param {string|null} props.email
  * @param {string|null} props.telefone
  */
-class Funcionario extends BaseModel {
+class Funcionario{
   constructor({ id = null, nome, papel = 'funcionario', registro = null, email = null, telefone = null } = {}) {
     super();
     this.id = id;
