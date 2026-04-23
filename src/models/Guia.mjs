@@ -11,3 +11,21 @@ export const postGuiaModel = async(conexaoDB, guia) => {
         
     }
 }
+
+export const deleteGuiaModel = async(conexaoDB, guia) => {
+    const sql = 'DELETE INTO guia'
+}
+
+export const getGuiaModel = async(conexaoDB) => {
+
+    const sql = 'SELECT id, nome, registro FROM guia';
+
+    try {
+        const resultado = await conexaoDB.execute(sql);
+        console.log(resultado[0]);
+        return resultado[0];
+    } catch (error) {
+        console.log(error.message);
+        throw error;
+    }
+}

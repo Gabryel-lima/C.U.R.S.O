@@ -1,6 +1,6 @@
 import { dbConnectionPool } from "../../../config/dbConfig.mjs";
-import { Guia } from "../lib/Guia.mjs";
-import { postGuiaModel } from "../models/Guia.mjs";
+import { Guia } from "../../lib/Guia.mjs";
+import { postGuiaModel } from "../../models/Guia.mjs";
 
 export const postGuiaControler = async(id , nome , registro ) => {
 
